@@ -1,0 +1,211 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+  --input-background: #fff;
+  --input-border: #bdc3c7;
+  --input-focus: #3498db;
+  --submit-hover: #2980b9;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* 追加: ナビバーの要素を左右に配置 */
+  align-items: center; /* 追加: ナビバーのリンクを垂直方向に中央揃え */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+span {
+  color: white;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.logout-form {
+  display: flex;
+  align-items: center; /* 追加: フォーム内の要素を垂直方向に中央揃え */
+  margin: 0; /* 修正: マージンをリセット */
+  background-color: transparent;
+  width: auto;
+  padding: 0;
+}
+
+.logout-button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+form {
+  background-color: var(--input-background);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* 入力欄の横幅を広げる */
+  margin: auto;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  word-wrap: break-word; /* URLが長い場合に折り返す */
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--submit-hover);
+}
+
+input[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* テーブル全体のスタイル */
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+  min-width: 400px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* テーブルヘッダーのスタイル */
+table th {
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* テーブルセルのスタイル */
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word; /* URLが長い場合に折り返す */
+}
+
+/* 偶数行の背景色を変更 */
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 行のホバー効果 */
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* リンクのスタイル */
+table a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
